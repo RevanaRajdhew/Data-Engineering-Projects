@@ -1,15 +1,35 @@
 # 🎧 Spotify Data Engineering Pipeline (AWS)
 
-This is an end-to-end AWS data engineering pipeline project using real Spotify data. It demonstrates ingestion, transformation, and querying using core AWS services.
+This is an end-to-end data engineering pipeline built using AWS services and real-world Spotify data. It demonstrates how raw music metadata can be transformed, queried, and analyzed using serverless cloud tools.
 
-## 💡 Project Summary
+---
 
-- **Data Source:** Spotify Dataset (CSV)
-- **Storage:** Amazon S3 (raw + processed zones)
-- **ETL:** AWS Glue with PySpark
-- **Cataloging:** AWS Glue Crawler
-- **Querying:** Amazon Athena
+## 📌 Project Overview
 
+We used datasets containing **Spotify albums**, **artists**, and **track data** and built a pipeline to:
+
+- Ingest the data into **Amazon S3** (raw zone)
+- Use **AWS Glue and PySpark** to transform and join the datasets
+- Store processed data in **S3** (processed/data warehouse layer)
+- Catalog the data using **Glue Crawlers** and **Glue Data Catalog**
+- Query the processed data using **Amazon Athena**
+- Visualize or explore the insights further using **Amazon QuickSight**
+- Enable **query logging** using Athena to track all data access patterns
+
+This project simulates the type of scalable, serverless pipelines used in modern data lake architectures.
+
+---
+
+## 📊 Example Queries and Insights
+
+With the cleaned and structured data, we can answer analytical questions such as:
+
+- 🎵 **Top 10 longest songs** by duration
+- 🧑‍🎤 **Most prolific artists** by number of tracks
+- 📀 **Albums with highest total duration**
+- 📅 **Song releases by year**
+- 🔍 **Average track duration** per artist or album
+- 🗂️ **Track filtering** by genre, release year, or keyword
 
 ## 📐 Architecture
 
